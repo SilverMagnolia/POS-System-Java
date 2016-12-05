@@ -1,0 +1,25 @@
+6
+Suji	1010	1324	Gold
+Park	0113	2212	Silver
+GDragon	0818	3454	Silver
+You	0814	4757	Bronze
+Su	0827	5656	Normal
+Else	9999	9999	Normal
+6
+Kim	Staff
+Hani	Staff
+Sujin	Supervisor
+Boyoung	Staff
+Tang	Staff
+Yuna	Supervisor
+10
+Susi		21000
+PorkStake	25000
+TomatoPasta	21000
+GGarbonara	13000
+Roje		12000
+Risoddo		12500
+ChochlateCake	13000
+Salad		13000
+KalNoodle	9000
+Cury		10000
