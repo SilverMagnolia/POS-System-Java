@@ -21,7 +21,7 @@ public class DB_Connection {
 			
 			Class.forName("oracle.jdbc.OracleDriver");
 			this.db = DriverManager.getConnection("jdbc:oracle:thin:" + "@localhost:1521:XE", id, pass);
-			System.out.println("데이터베이스접속 성공 - id: " + id);
+			System.out.println("Connected to DB - id: " + id);
 			return true;
 			
 		} catch (SQLException e) {
@@ -53,8 +53,7 @@ public class DB_Connection {
 		} catch (SQLException e) {			
 			System.out.println(e.getMessage());
 			JOptionPane warning = new JOptionPane();
-			warning.showMessageDialog(null, "직원등록은 Supervisor만 할 수 있습니다.", "등록 실패",
-					warning.WARNING_MESSAGE);
+			warning.showMessageDialog(null, "Only supervisor can register an employee.","failed to register", warning.WARNING_MESSAGE);
 		}
 		return n;
 	}
@@ -81,8 +80,7 @@ public class DB_Connection {
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 			JOptionPane warning = new JOptionPane();
-			warning.showMessageDialog(null, "회원등록은 Supervisor만 할 수 있습니다.", "등록 실패",
-					warning.WARNING_MESSAGE);
+			warning.showMessageDialog(null, "Only supervisor can register a customer.", "failed to register", warning.WARNING_MESSAGE);
 
 		}
 		
@@ -105,8 +103,7 @@ public class DB_Connection {
 		} catch (SQLException e) {			
 			System.out.println(e.getMessage());
 			JOptionPane warning = new JOptionPane();
-			warning.showMessageDialog(null, "메뉴등록은 Supervisor만 할 수 있습니다.", "등록 실패",
-					warning.WARNING_MESSAGE);
+			warning.showMessageDialog(null, "Only supervisor can register a menu.", "failed to register", warning.WARNING_MESSAGE);
 		}
 		
 		return n;
@@ -214,7 +211,6 @@ public class DB_Connection {
 	
 	public int updateTotalPerformance(int total_price)
 	{
-		//update table set column = '변경값' where 조건
 		String query = "update employee set total_performance = ? where name = ?";
 		ps = null;
 		int n = -1;
